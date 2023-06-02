@@ -1,0 +1,90 @@
+.contact_section{
+    padding: 150px 0;
+}
+.contact_form h3{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.contact_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact_image img{
+    width: 100%;
+}
+.input_block{
+    width: 48%;
+}
+input,textarea{
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+}
+.textarea_block textarea{
+    width: 100%;
+}
+form label{
+    margin-bottom: 10px;
+    font-size: 18px;
+} 
+.name_block{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form_btn_block button{
+    border: none;
+    text-align: center;
+    width: 40%;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #4233ec;
+}
+.form_btn_block button:disabled{
+    background-color: #ddd;
+    color: #ccc;
+    cursor: not-allowed;
+}
+.myform_invalid input , .myform_invalid textarea {
+    border: 1px solid red;
+}
+
+
+/* ----------------------------- Responsive CSS Start ----------------------------- */
+@media (max-width:1600px){
+     .contact_section {
+        padding: 100px 0;
+    }
+}
+@media (max-width:1360px){
+    .contact_section {
+        padding: 70px 0;
+    }
+}
+@media (max-width:1199px){
+    .contact_form h3 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }    
+}
+@media (max-width:991px){
+    .order{
+        order: 2;
+    }
+}
+@media (max-width:767px){
+    .contact_form h3{
+        font-size: 32px;
+    }
+   
+}
+/* ----------------------------- Responsive CSS End ----------------------------- */
+
+

@@ -1,0 +1,445 @@
+* {
+    outline: none !important;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+html body {
+    overflow-x: hidden;
+    font-family: 'Questrial', sans-serif;
+    margin: 0;
+    line-height: 1.4;
+    color: #000;
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+}
+p {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+.cm_button {
+    width: 100%;
+    text-align: center;
+}
+.cm_button a {
+    margin-top: 20px;
+    padding: 15px 0;
+    min-width: 200px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #cc4e1d;
+    background-color: #fff;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+.cm_button a:hover {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+/* ----------------------------- Header CSS Start ----------------------------- */
+.header_wrapper {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #000000;
+}
+.logo a:hover {
+    color: #8b234b;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menus {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menus a {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s;
+    margin-left: 30px;
+    position: relative;
+}
+.menus a.active:after {
+    width: 100%;
+}
+.menus a:after {
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    content: '';
+    transition: all 0.5s;
+    position: absolute;
+    background-color: #8b234b;
+}
+.menus a:hover {
+    color: #8b234b;
+}
+.menus a:hover::after {
+    right: 0;
+    left: auto;
+    width: 100%;
+}
+.userIcon{
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-left: 30px;
+    color: #fff;
+    background-color: #000000;
+}
+.modal_box{
+    opacity: 0;
+    z-index: 100;
+    left: 50%;
+    padding: 20px;
+    top: 50%;
+    width: 550px;
+    height: 450px;
+    position: fixed;
+    transition: all 0.5s;
+    border-radius: 20px;
+    background-color: #fff;
+    transform: translate(-50%,-30%);
+}
+
+.modal_hide .modal_box{
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: -2;
+}
+.modal_show .modal_box{
+    opacity: 1;
+    transition: all 0.5s;
+    transform: translate(-50% , -50%);
+}
+.closeBtn{
+    padding: 3px 12px;
+    background-color: #1e90ff;
+    border: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 50px;
+    color: #fff;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+.closeBtn:hover{
+    background-color: #0d6fd1;
+}
+.modal_form{
+    display: flex;
+    align-items: center;
+}
+.modal_inner{
+    width: 70%;
+    margin: 0 auto;
+}
+.modal_inner label{
+    margin-bottom: 5px;
+}
+.modal_inner h3{
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.loginBtn{
+    background-color: dodgerblue;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    border: none;
+    padding: 10px;
+    font-size: 23px;
+    color: #fff;
+    min-width: 200px;
+}
+.loginBtn:hover{
+    background-color: rgb(12, 98, 184);
+}
+.bodyOver{
+    overflow: hidden;
+    position: relative;
+}
+.bodyOver::after{
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    background-color: #000;
+}
+/* ----------------------------- Header CSS End ----------------------------- */
+
+/* ----------------------------- Footer CSS Start ----------------------------- */
+
+.footer {
+    background-color: #fff;
+    padding-top: 90px;
+    padding-bottom: 140px;
+}
+.footer_columns h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.footer_columns ul li a {
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #000;
+}
+.footer_columns ul li a:hover {
+    color: #cc4e1d;
+}
+.footer_columns ul {
+    margin: 0;
+    padding: 0;
+}
+.footer_top_layer{
+    height: 10px;
+    background-image:linear-gradient(19deg, #000, #ff4b01, #c12127, #e02aff,Yellow,Green,blue);
+    animation: footer_layer 10s linear infinite;
+}
+@keyframes footer_layer {
+    0%{
+        background-position: 0%;
+        background-size: 100%;
+    }
+    100%{
+        background-position: 100%;
+        background-size: 1000%;
+    }
+}
+
+
+/* ----------------------------- Footer CSS End ----------------------------- */
+
+/* ----------------------------- Banner CSS Start ----------------------------- */
+.banner {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(./Assets/Images/download.png);
+    position: relative;
+}
+.banner::after {
+    top: 0;
+    left: 0;
+    content: '';
+    opacity: 0.2;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.banner_innner {
+    position: relative;
+    z-index: 2;
+}
+.banner_innner h1 {
+    font-family: 'Righteous';
+    color: #fff;
+    font-weight: bold;
+    font-size: 8pc;
+    max-width: 99%;
+    margin: 0 auto;
+    text-align: center;
+}
+/* ----------------------------- Banner CSS End ----------------------------- */
+/* ----------------------------- Accordian CSS Start ----------------------------- */
+.accordian_section {
+    padding-bottom: 150px;
+}
+.accordian_section .heading {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.accordian_blcok{
+    margin-bottom: 20px;
+}
+.acc_header{
+    display: flex;
+    padding: 5px 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(224 224 237 / 39%);
+}
+.acc_header h3{
+    margin: 0;
+    font-size: 22px;
+}
+.acc_info p{
+    background-color: rgb(255 246 246);
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+}
+.arrow{
+    font-size: 35px;
+}
+#accOpen{
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height 1s ease;
+}
+#accClose{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+/* ----------------------------- Accordian CSS End ----------------------------- */
+
+/* ----------------------------- Responsive CSS Start ----------------------------- */
+@media (max-width:1600px){
+    .banner{
+        height: 650px;
+    }
+    .banner_innner h1{
+        font-size: 7pc;
+    }
+}
+@media (max-width:1440px){
+    .banner{
+        height: 580px;
+    }
+    .banner_innner h1{
+        font-size: 6pc;
+    }
+    .accordian_section{
+        padding-bottom: 100px;
+    }
+}
+@media (max-width:1360px){
+    .banner{
+        height: 500px;
+    }
+    .footer{
+        padding: 80px 0;
+    }
+    .heroImage img {
+        width: 300px;
+    }
+}
+@media (max-width:1199px){
+    .cm_button a{
+        font-size: 20px;
+        min-width: 150px;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+    .section_two {
+        padding: 40px 0;
+    }
+    .banner{
+        height: 400px;
+    }
+    .banner_innner h1 {
+        font-size: 5pc;
+    }
+    .accordian_section {
+        padding-bottom: 50px;
+    }
+    .banner_innner h1 {
+        font-size: 4pc;
+    }
+    .footer {
+        padding: 50px 0;
+    }
+}
+@media (max-width:992px){
+    .banner {
+        height: 300px;
+    }
+    .banner_innner h1 {
+        font-size: 3.5pc;
+    }
+    .hero_center{
+        order: 2;
+    }
+    .hero_left {
+        margin-top: 30px;
+    }
+}
+@media (max-width:767px){
+    .footer_columns:nth-child(3n+2){
+        margin-bottom: 30px;
+    }
+    .footer {
+        padding: 30px 0;
+        padding-top: 50px;
+    }
+}
+@media (max-width:575px){
+    .userIcon{
+        padding: 10px 11px;
+        margin-left: 20px;
+    }
+    .menus a{
+        margin-left: 15px;
+        font-size: 16px;
+    }
+    .logo a b{
+        font-size: 27px;
+    }
+    .banner_innner h1 {
+        font-size: 2.5pc;
+    }
+    .banner {
+        height: 230px;
+    }
+    .modal_inner {
+        width: 92%;
+    }
+    .loginBtn {
+        min-width: 140px;
+    }
+    .modal_box{
+        width: 340px;
+        padding: 20px;
+    }
+    .acc_info p {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .accordian_blcok{
+        margin-bottom: 10px;
+    }
+    .acc_header{
+        padding: 10px 15px;
+    }
+}
+/* ----------------------------- Responsive CSS End ----------------------------- */
