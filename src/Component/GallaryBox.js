@@ -4,7 +4,7 @@ const GallaryBox = (props) => {
     return (
         <>  
         <div className="imageBox">
-            <img src={props.Gimage} alt="gallary" />
+            <img src={props.Gimage} alt="gallary"  />
         </div>
         </>
     )
